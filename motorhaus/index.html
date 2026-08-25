@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorHaus | Performance e Manutenção Automotiva</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Oficina especializada em manutenção automotiva, preparação, performance, dinamômetro 4x4 e coding para veículos premium em Caxias do Sul.">
+    
+    <!-- Google Fonts (Sugestão de fontes modernas e agressivas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+     <!-- Link para o futuro arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body class="theme-dark">
+
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <!-- Utilizando a logo fornecida -->
+                    <img src="Logo_motorHaus.jpg" alt="MotorHaus Logo">
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#sobre">A Empresa</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#dinamometro">Dinamômetro</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="https://wa.me/555430665385" target="_blank" class="btn btn-primary">
+                    Agendar
+                </a>
+            </div>
+            
+            <!-- Menu Hamburguer para Mobile -->
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <!-- A imagem de fundo será inserida via CSS (Carro esportivo / Oficina Premium) -->
+            <div class="container hero-content">
+                <span class="badge-red">TECNOLOGIA E POTÊNCIA</span>
+                <h1 class="hero-title">PERFORMANCE <br>SEM <span class="text-red">LIMITES.</span></h1>
+                <p class="hero-subtitle">Especialistas em manutenção automotiva, preparação e performance de alto nível. Seu carro, nossa especialidade.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/555430665385" target="_blank" class="btn btn-primary btn-large">
+                        Fale com um Especialista
+                    </a>
+                    <a href="#servicos" class="btn btn-secondary btn-large">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE A EMPRESA -->
+        <section id="sobre" class="about-section">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2 class="section-title">DO USO DIÁRIO À <span class="text-red">ALTA PERFORMANCE</span></h2>
+                    <p>A MotorHaus une precisão mecânica, tecnologia de ponta e paixão por motores. Entendemos que cada veículo exige um cuidado único.</p>
+                    <p>Seja para a manutenção preventiva rigorosa do seu carro de uso diário ou para extrair o máximo de desempenho em projetos de alta performance, nossa estrutura e equipe estão prontas para entregar resultados excepcionais.</p>
+                    <ul class="about-features">
+                        <li><i class="fa-solid fa-check text-red"></i> Especialistas em Veículos Premium</li>
+                        <li><i class="fa-solid fa-check text-red"></i> Tecnologia e Diagnóstico Avançado</li>
+                        <li><i class="fa-solid fa-check text-red"></i> Projetos Sob Medida</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <!-- Imagem será inserida via CSS / HTML (Mecânico trabalhando em motor premium) -->
+                    <div class="image-placeholder bg-engine"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO PACOTES / CUIDADO IDEAL (FUNDO BRANCO) -->
+        <section class="packages-section">
+            <div class="container">
+                <div class="packages-wrapper">
+                    <div class="packages-header">
+                        <div class="packages-title-area">
+                            <span class="packages-subtitle text-red">NOSSOS SERVIÇOS</span>
+                            <h2 class="packages-title">Escolha o Pacote Ideal</h2>
+                        </div>
+                        <a href="#servicos" class="packages-view-all text-red">Ver Todos os Serviços <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="packages-grid">
+                        <!-- Card 1 -->
+                        <div class="package-card">
+                            <div class="package-icon"><i class="fa-solid fa-wrench"></i></div>
+                            <h3>Revisão Premium</h3>
+                            <p>Manutenção preventiva completa, verificação de fluidos, filtros e diagnóstico eletrônico.</p>
+                            <div class="package-img" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80')"></div>
+                            <div class="package-footer">
+                                <span class="price">Sob Consulta</span>
+                                <a href="https://wa.me/555430665385" target="_blank" class="text-red">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 (Destaque Vermelho) -->
+                        <div class="package-card highlighted">
+                            <div class="badge-popular">MAIS PROCURADO</div>
+                            <div class="package-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <h3>Stage 2 Armada</h3>
+                            <p>Remap de ECU + TCU, ajuste de turbina e downpipe para extrair o máximo de performance.</p>
+                            <div class="package-img" style="background-image: url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80')"></div>
+                            <div class="package-footer">
+                                <span class="price">Sob Consulta</span>
+                                <a href="https://wa.me/555430665385" target="_blank" class="btn-agendar">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="package-card">
+                            <div class="package-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3>Coding VW/Audi/BMW</h3>
+                            <p>Desbloqueio de funções ocultas, personalização de painel e ajustes via software original.</p>
+                            <div class="package-img" style="background-image: url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&q=80')"></div>
+                            <div class="package-footer">
+                                <span class="price">Sob Consulta</span>
+                                <a href="https://wa.me/555430665385" target="_blank" class="text-red">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="package-card">
+                            <div class="package-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>Dinamômetro 4x4</h3>
+                            <p>Aferição de potência e torque real nas rodas com laudo impresso e medição de ganhos.</p>
+                            <div class="package-img" style="background-image: url('https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80')"></div>
+                            <div class="package-footer">
+                                <span class="price">Sob Consulta</span>
+                                <a href="https://wa.me/555430665385" target="_blank" class="text-red">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PERFORMANCE / TELEMETRIA -->
+        <section id="performance" class="performance-section">
+            <div class="container">
+                <div class="performance-content">
+                    <h2 class="section-title">PRECISÃO EM CADA <span class="text-red">DETALHE</span></h2>
+                    <p>Não trabalhamos com achismos. Cada reprogramação de ECU, TCU ou alteração de Stage é embasada em dados, telemetria e gráficos reais de comportamento do motor. O resultado é potência pura, torque otimizado e confiabilidade.</p>
+                    
+                    <!-- Representação visual abstrata de telemetria/gráficos (será feita via CSS) -->
+                    <div class="telemetry-graphics">
+                        <div class="graph-line">
+                            <span class="label">Potência Original</span>
+                            <div class="bar bar-stock"></div>
+                        </div>
+                        <div class="graph-line">
+                            <span class="label">Potência MotorHaus (Stage)</span>
+                            <div class="bar bar-tuned"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DINAMÔMETRO -->
+        <section id="dinamometro" class="dyno-section bg-darker">
+            <div class="container dyno-container">
+                <div class="dyno-image">
+                    <!-- Imagem forte de carro no dinamômetro -->
+                    <div class="image-placeholder bg-dyno"></div>
+                </div>
+                <div class="dyno-text">
+                    <h2 class="section-title">DINAMÔMETRO <span class="text-red">4X4</span></h2>
+                    <h3 class="subtitle">A verdade sobre a potência do seu veículo.</h3>
+                    <p>Contamos com dinamômetro 4x4 de última geração em nossa estrutura. Uma ferramenta fundamental para aferir ganhos reais de potência e torque, garantindo que o acerto do seu carro seja seguro e entregue a máxima performance.</p>
+                    <a href="https://wa.me/555430665385" class="btn btn-primary mt-4">Agendar Medição</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARCAS / VEÍCULOS PREMIUM -->
+        <section class="brands-section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">ESPECIALISTAS EM <span class="text-red">VEÍCULOS PREMIUM</span></h2>
+                    <p>Experiência técnica exigida pelas maiores montadoras do mundo.</p>
+                </div>
+                <div class="brands-grid">
+                    <div class="brand-item"><span>BMW</span></div>
+                    <div class="brand-item"><span>AUDI</span></div>
+                    <div class="brand-item"><span>MERCEDES-BENZ</span></div>
+                    <div class="brand-item"><span>VOLKSWAGEN</span></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO GALERIA INSTAGRAM -->
+        <section class="gallery-section fade-in">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">NOSSA <span class="text-red">GARAGEM</span></h2>
+                    <p>Acompanhe os últimos projetos no <a href="https://www.instagram.com/motorhausperformance/" target="_blank" class="text-red">@motorhausperformance</a></p>
+                </div>
+            </div>
+            
+            <!-- Grid de 3 colunas grudadas estilo IG -->
+            <div class="ig-grid">
+                <!-- Depois você troca essas classes bg-ig pelas fotos reais dos Porsches/oficina -->
+                <div class="ig-item bg-ig-1"></div>
+                <div class="ig-item bg-ig-2"></div>
+                <div class="ig-item bg-ig-3"></div>
+            </div>
+        </section>
+
+        
+        <!-- LOCALIZAÇÃO E CONTATO -->
+        <section id="contato" class="contact-section bg-darker">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">VENHA NOS <span class="text-red">VISITAR</span></h2>
+                    <p>Traga seu projeto para quem entende de carros de verdade.</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot text-red"></i>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Av. Ruben Bento Alves, 1668<br>Jardim América, Caxias do Sul - RS<br>CEP: 95050-032</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone text-red"></i>
+                            <div>
+                                <strong>Telefone / WhatsApp</strong>
+                                <p>(54) 3066-5385</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock text-red"></i>
+                            <div>
+                                <strong>Horário de Funcionamento</strong>
+                                <p>Segunda a Sexta: até 18:15</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/555430665385" class="btn btn-primary mt-4">
+                        <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+                
+                <div class="contact-map">
+                    <!-- Mapa Iframe Google Maps fictício focando no endereço fornecido -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.921609139268!2d-51.1592316!3d-29.1557022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea313c0b56b3d%3A0x6b4f74d0920d3a77!2sAv.%20Ruben%20Bento%20Alves%2C%201668%20-%20Jardim%20Am%C3%A9rica%2C%20Caxias%20do%20Sul%20-%20RS%2C%2095050-032!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 8px; filter: invert(90%) hue-rotate(180deg);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="Logo_motorHaus.jpg" alt="MotorHaus Logo" class="footer-logo">
+                <p>Performance, tecnologia e precisão mecânica para o seu veículo.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#sobre">A Empresa</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#dinamometro">Dinamômetro</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Av. Ruben Bento Alves, 1668</p>
+                <p>Jardim América, Caxias do Sul - RS</p>
+                <p>(54) 3066-5385</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 MotorHaus Performance e Manutenção Automotiva. Todos os direitos reservados.</p>
+                <p class = "dev-credits">Desenvolvido por <a href="https://nivotech.com.br" target="_blank">Nivotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
