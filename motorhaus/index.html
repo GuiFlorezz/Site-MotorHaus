@@ -23,9 +23,9 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="#">
+                <a href="#hero">
                     <!-- Utilizando a logo fornecida -->
-                    <img src="Logo_motorHaus.jpg" alt="MotorHaus Logo">
+                    <img src="img/Code_Generated_Image.png" alt="MotorHaus Logo">
                 </a>
             </div>
             
@@ -74,7 +74,7 @@
 
         <!-- SOBRE A EMPRESA -->
         <section id="sobre" class="about-section">
-            <div class="container about-container">
+            <div class="container about-container reveal delay-300">
                 <div class="about-text">
                     <h2 class="section-title">DO USO DIÁRIO À <span class="text-red">ALTA PERFORMANCE</span></h2>
                     <p>A MotorHaus une precisão mecânica, tecnologia de ponta e paixão por motores. Entendemos que cada veículo exige um cuidado único.</p>
@@ -102,12 +102,14 @@
                             <span class="packages-subtitle text-red">NOSSOS SERVIÇOS</span>
                             <h2 class="packages-title">Escolha o Pacote Ideal</h2>
                         </div>
-                        <a href="#servicos" class="packages-view-all text-red">Ver Todos os Serviços <i class="fa-solid fa-arrow-right"></i></a>
+                       <button type="button" id="openServicesModal" class="packages-view-all text-red">
+                            Ver Todos os Serviços <i class="fa-solid fa-arrow-right"></i>
+                       </button>
                     </div>
 
                     <div class="packages-grid">
                         <!-- Card 1 -->
-                        <div class="package-card">
+                        <div class="package-card reveal delay-100">
                             <div class="package-icon"><i class="fa-solid fa-wrench"></i></div>
                             <h3>Revisão Premium</h3>
                             <p>Manutenção preventiva completa, verificação de fluidos, filtros e diagnóstico eletrônico.</p>
@@ -119,7 +121,7 @@
                         </div>
 
                         <!-- Card 2 (Destaque Vermelho) -->
-                        <div class="package-card highlighted">
+                        <div class="package-card highlighted reveal delay-200">
                             <div class="badge-popular">MAIS PROCURADO</div>
                             <div class="package-icon"><i class="fa-solid fa-gauge-high"></i></div>
                             <h3>Stage 2 Armada</h3>
@@ -132,7 +134,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="package-card">
+                        <div class="package-card reveal delay-300">
                             <div class="package-icon"><i class="fa-solid fa-laptop-code"></i></div>
                             <h3>Coding VW/Audi/BMW</h3>
                             <p>Desbloqueio de funções ocultas, personalização de painel e ajustes via software original.</p>
@@ -144,7 +146,7 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="package-card">
+                        <div class="package-card reveal delay-400">
                             <div class="package-icon"><i class="fa-solid fa-chart-line"></i></div>
                             <h3>Dinamômetro 4x4</h3>
                             <p>Aferição de potência e torque real nas rodas com laudo impresso e medição de ganhos.</p>
@@ -161,7 +163,7 @@
 
         <!-- SEÇÃO PERFORMANCE / TELEMETRIA -->
         <section id="performance" class="performance-section">
-            <div class="container">
+            <div class="container reveal delay-200">
                 <div class="performance-content">
                     <h2 class="section-title">PRECISÃO EM CADA <span class="text-red">DETALHE</span></h2>
                     <p>Não trabalhamos com achismos. Cada reprogramação de ECU, TCU ou alteração de Stage é embasada em dados, telemetria e gráficos reais de comportamento do motor. O resultado é potência pura, torque otimizado e confiabilidade.</p>
@@ -189,7 +191,7 @@
                     <div class="image-placeholder bg-dyno"></div>
                 </div>
                 <div class="dyno-text">
-                    <h2 class="section-title">DINAMÔMETRO <span class="text-red">4X4</span></h2>
+                    <h2 class="section-title reveal delay-200">DINAMÔMETRO <span class="text-red reveal delay-200">4X4</span></h2>
                     <h3 class="subtitle">A verdade sobre a potência do seu veículo.</h3>
                     <p>Contamos com dinamômetro 4x4 de última geração em nossa estrutura. Uma ferramenta fundamental para aferir ganhos reais de potência e torque, garantindo que o acerto do seu carro seja seguro e entregue a máxima performance.</p>
                     <a href="https://wa.me/555430665385" class="btn btn-primary mt-4">Agendar Medição</a>
@@ -205,10 +207,10 @@
                     <p>Experiência técnica exigida pelas maiores montadoras do mundo.</p>
                 </div>
                 <div class="brands-grid">
-                    <div class="brand-item"><span>BMW</span></div>
-                    <div class="brand-item"><span>AUDI</span></div>
-                    <div class="brand-item"><span>MERCEDES-BENZ</span></div>
-                    <div class="brand-item"><span>VOLKSWAGEN</span></div>
+                    <div class="brand-item reveal delay-100"><span>BMW</span></div>
+                    <div class="brand-item revela delay-200"><span>AUDI</span></div>
+                    <div class="brand-item reveal delay-300"><span>MERCEDES-BENZ</span></div>
+                    <div class="brand-item reveal delay-400"><span>VOLKSWAGEN</span></div>
                 </div>
             </div>
         </section>
@@ -235,7 +237,7 @@
         
         <!-- LOCALIZAÇÃO E CONTATO -->
         <section id="contato" class="contact-section bg-darker">
-            <div class="container contact-container">
+            <div class="container contact-container reveal delay-300">
                 <div class="contact-info">
                     <h2 class="section-title">VENHA NOS <span class="text-red">VISITAR</span></h2>
                     <p>Traga seu projeto para quem entende de carros de verdade.</p>
@@ -322,6 +324,86 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL DE TODOS OS SERVIÇOS -->
+    <div id="servicesModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeServicesModal">&times;</button>
+            
+            <div class="modal-header center">
+                <span class="text-red font-bold">MOTORHAUS PERFORMANCE</span>
+                <h2>TODOS OS NOSSOS SERVIÇOS</h2>
+                <p>Soluções completas em manutenção técnica e reprogramação automotiva.</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <!-- Categoria 1 -->
+                    <div class="modal-card">
+                        <div class="modal-card-header">
+                            <i class="fa-solid fa-gauge-high text-red"></i>
+                            <h3>Performance & Remap</h3>
+                        </div>
+                        <ul>
+                            <li>Reprogramação ECU (Stage 1, 2 e 3 Armada)</li>
+                            <li>Reprogramação TCU (Câmbio DSG / S-Tronic / ZF)</li>
+                            <li>Instalação de Downpipes e Intakes</li>
+                            <li>Pop & Bangs, Anti-lag e Launch Control</li>
+                        </ul>
+                    </div>
+
+                    <!-- Categoria 2 -->
+                    <div class="modal-card">
+                        <div class="modal-card-header">
+                            <i class="fa-solid fa-laptop-code text-red"></i>
+                            <h3>Coding & Eletrônica</h3>
+                        </div>
+                        <ul>
+                            <li>Ativação de funções ocultas (VW, Audi, BMW)</li>
+                            <li>Diagnóstico avançado via scanner original</li>
+                            <li>Personalização de painel TFT / Virtual Cockpit</li>
+                            <li>Ajuste de resposta de pedal e aceleração</li>
+                        </ul>
+                    </div>
+
+                    <!-- Categoria 3 -->
+                    <div class="modal-card">
+                        <div class="modal-card-header">
+                            <i class="fa-solid fa-chart-line text-red"></i>
+                            <h3>Dinamômetro 4x4</h3>
+                        </div>
+                        <ul>
+                            <li>Passada para aferição de potência e torque real</li>
+                            <li>Laudo técnico impresso de medição</li>
+                            <li>Acerto customizado de mapas em tempo real</li>
+                            <li>Diagnóstico de falhas sob carga</li>
+                        </ul>
+                    </div>
+
+                    <!-- Categoria 4 -->
+                    <div class="modal-card">
+                        <div class="modal-card-header">
+                            <i class="fa-solid fa-wrench text-red"></i>
+                            <h3>Manutenção Preventiva</h3>
+                        </div>
+                        <ul>
+                            <li>Troca de óleo e fluidos de alta performance (Motul)</li>
+                            <li>Revisão de sistema de freios esportivos e originais</li>
+                            <li>Descarbonização de admissão e limpeza de bicos</li>
+                            <li>Manutenção completa de motores Turbo e Aspirados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer center">
+                <a href="https://wa.me/555430665385" target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento Personalizado
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
     

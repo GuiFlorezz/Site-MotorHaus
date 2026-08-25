@@ -86,4 +86,65 @@ document.addEventListener('DOMContentLoaded', () => {
         bar.style.width = '0%';
         barObserver.observe(bar);
     });
+
+        /* ==========================================================================
+    CONTROLE DO MODAL DE SERVIÇOS
+    ========================================================================== */
+    const modal = document.getElementById('servicesModal');
+    const openBtn = document.getElementById('openServicesModal');
+    const closeBtn = document.getElementById('closeServicesModal');
+
+    if (openBtn && modal && closeBtn) {
+        // Abrir modal
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Trava a rolagem do fundo
+        });
+
+        // Fechar modal no botão X
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Libera a rolagem
+        });
+
+        // Fechar ao clicar fora da caixa do modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Fechar com a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+     // --- LÓGICA DE ANIMAÇÃO AO SCROLLAR (REVEAL) ---
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    
+    const revealOptions = {
+        threshold: 0.15, // Dispara quando 15% do elemento estiver visível
+        rootMargin: "0px 0px -50px 0px" // Dispara um pouco antes do elemento chegar no limite inferior
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+            // Adiciona a classe que faz o elemento aparecer
+            entry.target.classList.add('active');
+            // Deixa de observar o elemento para a animação ocorrer apenas uma vez
+            observer.unobserve(entry.target);
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealOnScroll.observe(el);
+    });
+
 });
