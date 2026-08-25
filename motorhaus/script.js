@@ -34,17 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
    /* ==========================================================================
        2. HEADER DINÂMICO (Efeito Ilha Dinâmica)
        ========================================================================== */
+    /* ==========================================================================
+    CONTROLE DO MODO ILHA (DISPARA APENAS APÓS A SEÇÃO HERO)
+    ========================================================================== */
     const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', () => {
-        // window.innerHeight pega a altura exata da primeira tela.
-        // Tiramos 50px só para o efeito acionar um milésimo antes de trocar de seção.
-        if (window.scrollY > window.innerHeight - 50) { 
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    const heroSection = document.querySelector('#hero') || document.querySelector('.hero');
+
+    if (header && heroSection) {
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Se a seção Hero NÃO estiver visível na tela, ativa o modo ilha
+                if (!entry.isIntersecting) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.15 // Transiciona quando restarem apenas 15% da Hero na tela
+        });
+
+        heroObserver.observe(heroSection);
+    }
 
     /* ==========================================================================
        3. ANIMAÇÃO DE TELEMETRIA (As barras crescem quando aparecem na tela)
