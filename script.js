@@ -1,26 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* ==========================================================================
-       1. MENU MOBILE (Abrir, fechar e trocar o ícone)
-       ========================================================================== */
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    const menuIcon = mobileBtn.querySelector('i');
+   1. MENU MOBILE (Abrir/Fechar com Animação)
+   ========================================================================== */
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-menu a');
 
-    // Abre/fecha o menu ao clicar no botão
+if (mobileBtn && navMenu) {
+    // Alterna a classe active no menu e no próprio botão
     mobileBtn.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        
-        // Alterna entre o ícone de hambúrguer (fa-bars) e o de fechar (fa-xmark)
-        if (navMenu.classList.contains('active')) {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-xmark');
-        } else {
-            menuIcon.classList.remove('fa-xmark');
-            menuIcon.classList.add('fa-bars');
-        }
+        mobileBtn.classList.toggle('active');
     });
+
+    // Fecha o menu e desfaz o "X" quando clica em qualquer link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileBtn.classList.remove('active');
+        });
+    });
+}
 
     // Fecha o menu automaticamente quando um link for clicado (mobile)
     navLinks.forEach(link => {
